@@ -320,7 +320,6 @@ public class Ventana extends javax.swing.JFrame {
             String sql = "UPDATE parque SET nombre=?,extension=?,idComunidad=? WHERE id=?";
             String trozos[] = this.comunidad.getSelectedItem().toString().split(" - ");
             int idComunidad = Integer.parseInt(trozos[0]);
-
             PreparedStatement ps = (PreparedStatement) con.prepareStatement(sql);
             ps.setString(1, this.nombre.getText());
             ps.setInt(2, Integer.parseInt(this.extension.getText()));
